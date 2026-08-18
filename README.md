@@ -11,13 +11,17 @@
 
 `Content/<category>/YYYY-MM-DD-slug.md` 파일을 추가합니다.
 
-문서의 첫 번째 `# 제목`이 사이트 제목으로 사용됩니다.
-
 예:
 
 ```text
 Content/csharp/2026-08-18-linq.md
 ```
+
+규칙:
+
+- 폴더는 한 단계만 category로 사용
+- 파일명은 `YYYY-MM-DD-slug.md`
+- 첫 번째 `# 제목`을 사이트 제목으로 사용
 
 ## 배포
 

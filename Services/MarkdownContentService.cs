@@ -77,34 +77,44 @@ public sealed class MarkdownContentService
     {
         var path = resourceName[ResourcePrefix.Length..].Replace('\\', '/');
         var segments = path.Split('/');
-        if (segments.Length < 2)
+        if (segments.Length != 2)
         {
             return null;
         }
 
         var category = segments[0];
-        var fileName = segments[^1];
+        var fileName = segments[1];
         var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fileName);
 
-        var slug = fileNameWithoutExtension;
-        var date = DateOnly.MinValue;
-
-        if (fileNameWithoutExtension.Length > 10
-            && DateOnly.TryParse(fileNameWithoutExtension[..10], out var parsedDate))
+        if (fileNameWithoutExtension.Length <= 11)
         {
-            date = parsedDate;
-            slug = fileNameWithoutExtension[11..];
+            return null;
         }
+
+        if (fileNameWithoutExtension[10] != '-')
+        {
+            return null;
+        }
+
+        if (!DateOnly.TryParseExact(
+                fileNameWithoutExtension[..10],
+                "yyyy-MM-dd",
+                out var date))
+        {
+            return null;
+        }
+
+        var slug = fileNameWithoutExtension[11..];
 
         if (string.IsNullOrWhiteSpace(slug))
         {
-            slug = fileNameWithoutExtension;
+            return null;
         }
 
         var title = ReadTitle(resourceName) ?? slug;
         var route = $"{category}/{fileNameWithoutExtension}";
 
-        return new Note(title, date, category, slug, route, resourceName);
+        return new Note(title, date, category, route, resourceName);
     }
 
     private string? ReadTitle(string resourceName)
