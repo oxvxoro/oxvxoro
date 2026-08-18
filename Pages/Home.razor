@@ -1,4 +1,5 @@
 @page "/"
+@inject MarkdownContentService Content
 
 <PageTitle>oxvxoro</PageTitle>
 
@@ -14,4 +15,23 @@
 
 <h2>Notes</h2>
 
-<p>아직 작성된 기록이 없습니다.</p>
+@{
+    var notes = Content.GetNotes();
+}
+
+@if (notes.Count == 0)
+{
+    <p>아직 작성된 기록이 없습니다.</p>
+}
+else
+{
+    <ul>
+        @foreach (var note in notes)
+        {
+            <li>
+                <a href="notes/@note.Route">@note.Title</a>
+                — @note.Date.ToString("yyyy-MM-dd") — @note.Category
+            </li>
+        }
+    </ul>
+}
