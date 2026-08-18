@@ -129,10 +129,14 @@ public sealed class MarkdownContentService
         string? line;
         while ((line = reader.ReadLine()) is not null)
         {
-            if (line.StartsWith("# ", StringComparison.Ordinal))
+            if (string.IsNullOrWhiteSpace(line))
             {
-                return line[2..].Trim();
+                continue;
             }
+
+            return line.StartsWith("# ", StringComparison.Ordinal)
+                ? line[2..].Trim()
+                : null;
         }
 
         return null;

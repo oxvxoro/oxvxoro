@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Content/*/*.md">
+    <EmbeddedResource Include="Content/**/*.md">
       <LogicalName>Content/%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
