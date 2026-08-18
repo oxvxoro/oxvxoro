@@ -44,6 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: publish/wwwroot
+          include-hidden-files: true
 
   deploy:
     needs: build
