@@ -15,3 +15,7 @@ section {
 pre {
     overflow-x: auto;
 }
+
+#blazor-error-ui {
+    display: none;
+}

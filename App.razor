@@ -4,9 +4,10 @@
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
-        <PageTitle>Not found</PageTitle>
+        <PageTitle>페이지를 찾을 수 없음</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
+            <h1>페이지를 찾을 수 없습니다.</h1>
+            <p><a href="">홈으로 돌아가기</a></p>
         </LayoutView>
     </NotFound>
 </Router>
