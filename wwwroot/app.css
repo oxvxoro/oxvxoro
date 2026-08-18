@@ -1,5 +1,5 @@
 body {
-    max-width: 800px;
+    max-width: 720px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -12,6 +12,23 @@ section {
     margin-bottom: 48px;
 }
 
+article {
+    line-height: 1.7;
+}
+
+article h2,
+article h3 {
+    margin-top: 2em;
+}
+
+article li + li {
+    margin-top: 0.25em;
+}
+
+a {
+    text-underline-offset: 0.15em;
+}
+
 pre {
     overflow-x: auto;
 }
@@ -19,7 +36,7 @@ pre {
 pre[class*="language-"] {
     padding: 16px;
     border-radius: 8px;
-    line-height: 1.5;
+    line-height: 1.6;
     max-width: 100%;
 }
 

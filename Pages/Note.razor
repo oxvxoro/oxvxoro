@@ -20,7 +20,13 @@ else
 
     <hr />
 
-    @((MarkupString)_html)
+    <p>
+        <small>@_note.Date.ToString("yyyy-MM-dd") · @_note.Category</small>
+    </p>
+
+    <article>
+        @((MarkupString)_html)
+    </article>
 }
 
 @code {
