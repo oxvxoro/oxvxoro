@@ -1,6 +1,6 @@
-# Introdution to Algorithms
+# Algorithms and Computation
 
-- https://youtu.be/ZA-tUyM_y7s?si=4rsbA4wycsTIUaQh
+- [Algorithms and Computation](https://youtu.be/ZA-tUyM_y7s?si=4rsbA4wycsTIUaQh)
 
 ---
 
@@ -13,7 +13,7 @@ Algorithm이라고 하면 그냥 문제를 빨리 푸는 방법이라고 생각�
 입력B → 성공
 입력C → 성공
 ```
-그러면 보통 테스트를 잘 통과했으니, 계획서 승인받고 배포해야지 라고 생각합니다. 물론 저도 그랬구요.
+그러면 작성된 TC는 잘 통과했으니, 배포하면 됩니다.
 
 근데 강의에선 Algorithm은 여기서 만약 TC에 없는 케이스가 있다면? 입력이 10개가 아니라 100만개라면? 우리가 생각하지 못한 이상한 입력이 들어온다면? 이라는 질문을 계속 던지고 있습니다.
 

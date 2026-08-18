@@ -1,5 +1,6 @@
 @page "/notes/{*Path}"
 @inject MarkdownContentService Content
+@inject IJSRuntime JsRuntime
 
 @if (_note is null)
 {
@@ -28,10 +29,21 @@ else
 
     private Models.Note? _note;
     private string _html = string.Empty;
+    private bool _shouldHighlight;
 
     protected override void OnParametersSet()
     {
         _note = Path is null ? null : Content.GetNote(Path);
         _html = _note is null ? string.Empty : Content.RenderHtml(_note);
+        _shouldHighlight = _note is not null;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (_shouldHighlight)
+        {
+            _shouldHighlight = false;
+            await JsRuntime.InvokeVoidAsync("syntaxHighlight.highlight");
+        }
     }
 }

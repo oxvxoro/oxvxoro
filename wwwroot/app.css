@@ -16,6 +16,26 @@ pre {
     overflow-x: auto;
 }
 
+pre[class*="language-"] {
+    padding: 16px;
+    border-radius: 8px;
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+code[class*="language-"] {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.9em;
+}
+
+:not(pre) > code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background: rgba(135, 131, 120, 0.15);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
 #blazor-error-ui {
     display: none;
 }
