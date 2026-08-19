@@ -9,6 +9,7 @@ public sealed class MarkdownContentService
     private const string ResourcePrefix = "Content/";
 
     private static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder()
+        .UsePipeTables()
         .DisableHtml()
         .Build();
 
