@@ -1,4 +1,4 @@
-# Algorithms and Computation
+# 1. Algorithms and Computation
 
 - [Algorithms and Computation](https://youtu.be/ZA-tUyM_y7s?si=4rsbA4wycsTIUaQh)
 
