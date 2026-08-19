@@ -438,8 +438,8 @@ size = 4
 | `get_at(i)` | **O(1)** | O(n) | **O(1)** |
 | `set_at(i)` | **O(1)** | O(n) | **O(1)** |
 | 맨 앞 삽입/삭제 | O(n) | **O(1)** | O(n) |
-| 맨 뒤 삽입 | O(n) | O(n)<sup>*</sup> | **O(1) amortized** |
-| 맨 뒤 삭제 | O(n) | O(n)<sup>*</sup> | **O(1) amortized** |
+| 맨 뒤 삽입 | O(n) | O(n) | **O(1) amortized** |
+| 맨 뒤 삭제 | O(n) | O(n) | **O(1) amortized** |
 | 중간 삽입/삭제 | O(n) | O(n) | O(n) |
 
 위 표는 강의에서 사용하는 기본 Singly Linked List 구현 기준입니다.
