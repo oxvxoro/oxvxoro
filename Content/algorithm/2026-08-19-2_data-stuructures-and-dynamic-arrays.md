@@ -434,12 +434,12 @@ size = 4
 정리하면 대략 다음과 같습니다.
 
 | 연산 | Static Array | Linked List | Dynamic Array |
-|---|---:|---:|---:|
+| ----------- | -----------: | ----------: | -----------------: |
 | `get_at(i)` | **O(1)** | O(n) | **O(1)** |
 | `set_at(i)` | **O(1)** | O(n) | **O(1)** |
 | 맨 앞 삽입/삭제 | O(n) | **O(1)** | O(n) |
-| 맨 뒤 삽입 | O(n) | O(n)\* | **O(1) amortized** |
-| 맨 뒤 삭제 | O(n) | O(n)\* | **O(1) amortized** |
+| 맨 뒤 삽입 | O(n) | O(n)<sup>*</sup> | **O(1) amortized** |
+| 맨 뒤 삭제 | O(n) | O(n)<sup>*</sup> | **O(1) amortized** |
 | 중간 삽입/삭제 | O(n) | O(n) | O(n) |
 
 위 표는 강의에서 사용하는 기본 Singly Linked List 구현 기준입니다.
