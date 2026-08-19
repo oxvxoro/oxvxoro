@@ -26,6 +26,24 @@ article li + li {
     margin-top: 0.25em;
 }
 
+article table {
+    width: 100%;
+    margin: 1.5em 0;
+    border-collapse: collapse;
+}
+
+article th,
+article td {
+    padding: 0.5em 0.75em;
+    border: 1px solid #d0d7de;
+    text-align: left;
+}
+
+article th {
+    background: #f6f8fa;
+    font-weight: 600;
+}
+
 a {
     text-underline-offset: 0.15em;
 }
